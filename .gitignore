@@ -1,0 +1,14 @@
+# Planning files
+/plan/
+
+# AI coding-agent directories
+/.agents/
+/.agent/
+/.claude/
+/.gemini/
+/.antigravity/
+
+# AI coding-agent instruction files
+/AGENTS.md
+/CLAUDE.md
+/GEMINI.md
