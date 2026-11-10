@@ -12,3 +12,9 @@
 /AGENTS.md
 /CLAUDE.md
 /GEMINI.md
+
+# Frontend tooling
+node_modules/
+dist/
+test-results/
+playwright-report/
