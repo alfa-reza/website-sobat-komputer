@@ -28,7 +28,7 @@
   <br>
   <img src="https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="Hosted on GitHub Pages">
   <img src="https://img.shields.io/badge/Images-WebP-4285F4?style=flat-square" alt="WebP Images">
-  <img src="https://img.shields.io/badge/Framework-None-6C757D?style=flat-square" alt="No Framework">
+  <img src="https://img.shields.io/badge/Framework-Bootstrap%205-7952B3?style=flat-square" alt="Bootstrap 5">
   <img src="https://img.shields.io/badge/Responsive-Mobile%20%26%20Desktop-2EA44F?style=flat-square" alt="Responsive untuk Mobile dan Desktop">
 </p>
 
@@ -103,7 +103,20 @@ Beberapa informasi yang tersedia di website:
 
 ## Teknologi yang Digunakan
 
-Website ini dibuat tanpa framework dan tidak membutuhkan proses build khusus.
+Website ini menggunakan **Bootstrap 5** untuk grid responsif dan lapisan visual kustom. Modul JavaScript katalog, carousel, dan kontak tetap dipertahankan. Aset framework disimpan lokal sehingga halaman tetap dapat dilayani langsung oleh GitHub Pages.
+
+### Pengembangan dan pengujian
+
+```bash
+npm ci
+npm run dev       # Vite, live preview
+npm test          # Pemeriksaan teks, aset, dan interaksi navigasi
+npm run build     # Kompilasi Sass Bootstrap dan build semua halaman ke dist/
+```
+
+`assets/scss/framework.scss` memuat grid Bootstrap saja untuk menghindari reset gaya yang mengganggu fitur lama. Jalankan `npm run build:css` setelah mengubah konfigurasi Sass, lalu sertakan `assets/css/framework.css` yang diperbarui untuk hosting statis langsung. Desain kustom berada di `assets/css/refresh.css`. Build Vite juga mempertahankan path gambar dinamis dari content adapter.
+
+Pengujian browser visual belum dilakukan di sandbox ini karena host unduhan browser tidak dapat diakses.
 
 ### HTML
 
